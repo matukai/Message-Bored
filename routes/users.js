@@ -10,9 +10,9 @@ router.route('/')
     name: newUser
   })
   .save()
-  .then(user => {
-    user = user.toJSON();
-    return res.json(user);
+  .then(users => {
+    users = users.toJSON();
+    return res.json(users);
   })
   .catch(err => {
     return res.json({message: err.message});
@@ -21,19 +21,14 @@ router.route('/')
 .get((req, res) => {
   return new User()
   .fetchAll()
-  .then(user => {
-    user = user.toJSON();
-    res.json(user);
+  .then(users => {
+    users = users.toJSON();
+    res.json(users);
   })
   .catch(err => {
     return res.json({message: err.message});
   })
 })
-
-
-
-
-
 
 
 

@@ -10,8 +10,6 @@ angular.module('myApp')
         .then(data => {
           //console.log('daaataaa', data)
           let result = data.data;
-          //console.log(result)
-          //console.log('RRRRRRRRR' + data.data);
           result.forEach(element => {
             topicArr.push(element);
           })

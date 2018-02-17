@@ -17,10 +17,10 @@ angular.module('myApp')
     controller: 'TopicsController',
     templateUrl: '/views/topics.html'
   })
-  // .when('/movies', {
-  //   controller: 'MoviesController',
-  //   templateUrl: '/views/movies.html'
-  // })
+  .when('/users', {
+    controller: 'UsersController',
+    templateUrl: '/views/users.html'
+  })
   // .when('/other', {
   //   controller: 'OtherController',
   //   templateUrl: '/views/other.html'
