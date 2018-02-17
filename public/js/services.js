@@ -8,9 +8,9 @@ angular.module('myApp')
     this.fetchTopics = function () {
       return $http.get('/api/topics')
         .then(data => {
-          console.log('daaataaa', data)
+          //console.log('daaataaa', data)
           let result = data.data;
-          console.log(result)
+          //console.log(result)
           //console.log('RRRRRRRRR' + data.data);
           result.forEach(element => {
             topicArr.push(element);
@@ -21,5 +21,16 @@ angular.module('myApp')
           console.log(err);
         })
     }
+
+    this.insertTopic = function (newTopic) {
+      return $http.post('/api/topics', newTopic)
+        .then(data => {
+          console.log('DATA', data.data)
+          let result = data.data;
+          topicArr.push(result)
+          //topicArr.push(data.d)
+        })
+    }
+
 
   }])

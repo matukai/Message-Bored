@@ -4,8 +4,8 @@ const Topic = require('../knex/models/Topic');
 
 router.route('/')
 .post((req, res) => {
-  //console.log(req.body);
-  let topicName = req.body.name;
+  console.log(req.body);
+  let topicName = req.body.name
   return new Topic({
     name: topicName,
     created_by: 1
@@ -14,7 +14,7 @@ router.route('/')
   .then(topics => {
     //console.log(topics)
      topics = topics.toJSON();
-     res.json(topics);
+     return res.json(topics);
   })
   .catch(err => {
     return res.json({message: err.message})
