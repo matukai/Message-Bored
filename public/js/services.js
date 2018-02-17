@@ -25,7 +25,7 @@ angular.module('myApp')
     this.insertTopic = function (newTopic) {
       return $http.post('/api/topics', newTopic)
         .then(data => {
-          console.log('DATA', data.data)
+          //console.log('DATA', data.data)
           let result = data.data;
           topicArr.push(result)
           //topicArr.push(data.d)

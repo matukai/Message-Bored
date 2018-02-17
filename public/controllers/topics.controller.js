@@ -11,7 +11,7 @@ angular.module('myApp')
   //GETS FIRED FROM NG-CLICK 
   $scope.addTopic = function(newTopic) {
     let topic = Object.assign({}, $scope.newTopic);
-    console.log(topic)
+    //console.log(topic)
     TopicService.insertTopic(topic);
     $scope.newTopic.name = '';
   };
