@@ -30,7 +30,18 @@ router.route('/')
   })
 })
 
-
+router.get('/:id', (req, res) => {
+  let id = req.params.id;
+  return new User({'id': id})
+  .fetch()
+  .then(user => {
+    user = user.toJSON();
+    res.json(user);
+  })
+  .catch(err => {
+    return res.json({message: err.message});
+  })
+})
 
 
 
