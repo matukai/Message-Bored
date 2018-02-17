@@ -22,12 +22,15 @@ router.route('/')
 })
 .get((req, res) => {
   //console.log(req)
-  return new Topic.fetchAll()
+  return new Topic().fetchAll()
   //fetchAll returns array of objects
   .then(topics => {
     topics = topics.toJSON();
     //console.log(topics)
     res.json(topics);
+  })
+  .catch(err => {
+    console.log(err.message)
   })
 })
 
