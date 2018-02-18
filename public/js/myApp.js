@@ -25,6 +25,10 @@ angular.module('myApp')
     controller: 'SingleUserController',
     templateUrl: '/views/single.user.html'
   })
+  .when('/topics/:id', {
+    controller: 'UpdateTopicController',
+    templateUrl: '/views/single.topic.html'
+  })
   // .otherwise({
   //   templateUrl: 'views/notfound.html'
   // })

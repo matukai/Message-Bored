@@ -25,6 +25,21 @@ angular.module('myApp')
           let result = data.data;
           topicArr.push(result)
         })
+        .then(err => {
+          console.log(err)
+        })
+    }
+
+    this.updateTopic = function (id, changeTopic) {
+      return $http.put('/api/topics/' + id, changeTopic)
+      .then(data => {
+        console.log('UPDATE SERVICE' , data.data)
+        let result = data.data;
+
+      })
+      .catch(err => {
+        console.log(err);
+      })
     }
 
 
