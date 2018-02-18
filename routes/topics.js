@@ -35,7 +35,21 @@ router.route('/')
 })
 
 router.put('/:id', (req, res) => {
-  console.log(req)
+  //console.log(req.params.id)
+  let id = req.params.id;
+  let newName = req.body.name;
+  //console.log(newName)
+  return new Topic({'id': id})
+  .save({
+    name: newName
+  })
+  .then(request => {
+    //console.log(request)
+    return res.json(request)
+  })
+  .catch(err => {
+    return res.json({message: err.message});
+  })
 })
 
 
