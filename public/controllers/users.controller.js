@@ -14,5 +14,13 @@ angular.module('myApp')
     console.log('usercontroller', user)
     UserService.insertUser(user);
     $scope.newUser.name = '';
-  }
+  };
+
+  
+
+
+
+
+
+
 }])

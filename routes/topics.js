@@ -34,6 +34,9 @@ router.route('/')
   })
 })
 
+router.put('/:id', (req, res) => {
+  console.log(req)
+})
 
 
 

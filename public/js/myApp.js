@@ -21,10 +21,10 @@ angular.module('myApp')
     controller: 'UsersController',
     templateUrl: '/views/users.html'
   })
-  // .when('/other', {
-  //   controller: 'OtherController',
-  //   templateUrl: '/views/other.html'
-  // })
+  .when('/users/:id', {
+    controller: 'SingleUserController',
+    templateUrl: '/views/single.user.html'
+  })
   // .otherwise({
   //   templateUrl: 'views/notfound.html'
   // })

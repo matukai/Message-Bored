@@ -32,10 +32,13 @@ router.route('/')
 
 router.get('/:id', (req, res) => {
   let id = req.params.id;
+  //console.log(req)
   return new User({'id': id})
   .fetch()
   .then(user => {
+    console.log('ROUTER GEEET')
     user = user.toJSON();
+    console.log(user)
     res.json(user);
   })
   .catch(err => {

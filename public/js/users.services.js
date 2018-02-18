@@ -8,7 +8,7 @@ angular.module('myApp')
   this.fetchUsers = function () {
     return $http.get('/api/users')
     .then(data => {
-      //console.log(data)
+      console.log('DATA',data)
       let result = data.data;
       result.forEach(element => {
         userArr.push(element);
@@ -25,10 +25,17 @@ angular.module('myApp')
     return $http.post('/api/users', newUser)
     .then(data => {
       let result = data.data;
-      userArr.push(result)
+      userArr.push(result);
     })
   }
 
+  this.fetchSingleUser = function () {
+    return $http.get('/api/users/:id')
+    .then(data => {
+      console.log('SERVICES CATCHING FROM DATABASE', data)
+      return data;
+    })
+  }
 
 
 
