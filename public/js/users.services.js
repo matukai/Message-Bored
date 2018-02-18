@@ -27,6 +27,9 @@ angular.module('myApp')
       let result = data.data;
       userArr.push(result);
     })
+    .catch(err => {
+      console.log(err)
+    })
   }
 
   this.fetchSingleUser = function () {
@@ -35,7 +38,23 @@ angular.module('myApp')
       console.log('SERVICES CATCHING FROM DATABASE', data)
       return data;
     })
+    .catch(err => {
+      console.log(err)
+    })
   }
+
+  this.login = function (input) {
+    return $http.get('/api/users/login')
+    .then(result => {
+      console.log('SERVICES')
+      console.log(result)
+    }) 
+    .catch(err => {
+      console.log(err)
+    })
+  }
+
+
 
 
 

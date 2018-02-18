@@ -29,6 +29,10 @@ angular.module('myApp')
     controller: 'UpdateTopicController',
     templateUrl: '/views/single.topic.html'
   })
+  .when('/login', {
+    controller: 'LoginController',
+    templateUrl: '/views/login.html'
+  })
   // .otherwise({
   //   templateUrl: 'views/notfound.html'
   // })

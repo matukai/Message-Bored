@@ -46,9 +46,22 @@ router.get('/:id', (req, res) => {
   })
 })
 
-
-
-
+router.get('/login', (req, res) => {
+  let userName = req.body.name;
+  console.log(req);
+  return new User({'name' : userName})
+  .fetch()
+  .then(user => {
+    console.log(user)
+    if(!user){
+      console.log(err)
+    }
+    return res.json(user)
+  })
+  .catch(err => {
+    return res.json({message: err.message});
+  })
+})
 
 
 
