@@ -46,15 +46,17 @@ router.get('/:id', (req, res) => {
   })
 })
 
-router.get('/login', (req, res) => {
+router.post('/login', (req, res) => {
   let userName = req.body.name;
-  console.log(req);
+  console.log('ROUTER' , req.body.name);
+  console.log(userName)
   return new User({'name' : userName})
   .fetch()
   .then(user => {
-    console.log(user)
+    console.log('LOGIN PROMISE' , user)
     if(!user){
-      console.log(err)
+      //console.log(err)
+      
     }
     return res.json(user)
   })

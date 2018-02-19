@@ -44,10 +44,21 @@ angular.module('myApp')
   }
 
   this.login = function (input) {
-    return $http.get('/api/users/login')
+    console.log('services' , input)
+    return $http({
+      method: 'POST',
+      url: '/api/users/login',
+      data: input
+    })
     .then(result => {
-      console.log('SERVICES')
-      console.log(result)
+      console.log('SERVICES PROMISE RETURNING FROM SERVER')
+      console.log('SERVICES DATA' , result.data)
+      console.log(result.data.id)
+      if(!result.data.id){
+
+      }
+      localStorage.setItem(result.data.name, result.data.id)
+
     }) 
     .catch(err => {
       console.log(err)
