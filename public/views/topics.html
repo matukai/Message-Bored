@@ -1,4 +1,7 @@
-<form>
+
+
+
+<form ng-if="getLoggedIn()">
     <input type="text" ng-model="newTopic.name">
     <br>
       <!-- <input type="text" ng-model="newTopic.created_by">
@@ -8,11 +11,12 @@
 
 
 
-
-
 <ul>
     <li ng-repeat='topic in topics'>
         <h1>NAME: {{topic.name}}</h1>
         <h1>ID : {{topic.id}}</h1>
     </li>
 </ul>
+
+
+
