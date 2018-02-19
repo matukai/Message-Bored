@@ -1,9 +1,12 @@
+
+
+
 <h1>{{"helllo angular"}}</h1>
 
 <a ng-href="/topics">Topics</a>
 
 <a ng-href="/users">Users</a>
 
-<a ng-href="/login">Login</a>
+<a ng-href="/login" >Login</a>
 
-<a ng-href="/logout">Logout</a>
+<a ng-href="/logout" ng-if="getLoggedIn">Logout</a>
