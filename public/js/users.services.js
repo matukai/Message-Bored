@@ -78,6 +78,11 @@ angular.module('myApp')
     return isLoggedIn;
   }
 
+  this.logout = function () {
+    localStorage.clear();
+    $location.path('/')
+  }
+
 
 
 
