@@ -1,6 +1,7 @@
 angular.module('myApp')
 .controller('UpdateTopicController', ['$scope','$location', '$routeParams','TopicService','MessageService', function ($scope, $location, $routeParams, TopicService, MessageService) {
 
+
   let id = $routeParams.id
   //console.log(id)
 

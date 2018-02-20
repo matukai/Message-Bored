@@ -56,7 +56,6 @@ router.post('/login', (req, res) => {
     console.log('LOGIN PROMISE' , user)
     if(!user){
       //console.log(err)
-      
     }
     return res.json(user)
   })

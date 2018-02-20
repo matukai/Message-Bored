@@ -25,7 +25,7 @@ angular.module('myApp')
           let result = data.data;
           topicArr.push(result)
         })
-        .then(err => {
+        .catch(err => {
           console.log(err)
         })
     }
