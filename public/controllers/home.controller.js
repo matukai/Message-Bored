@@ -1,4 +1,8 @@
 angular.module('myApp')
-.controller('HomeController', [function() {
+.controller('HomeController', [ function($scope, UserService) {
+
+
+
+
 
 }]);

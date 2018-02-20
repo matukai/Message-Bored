@@ -3,6 +3,7 @@ angular.module('myApp')
   //FETCH ALL TOPICS
   UserService.fetchUsers();
   $scope.users = UserService.getUsers();
+  console.log($scope.users)
 
   //INSERT USER
   $scope.newUser = {
