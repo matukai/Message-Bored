@@ -4,17 +4,22 @@ const Message = require('../knex/models/Message');
 
 
 router.post('/', (req,res) => {
-  let body = req.body.body;
-  console.log(body)
+  let insertBody = req.body.body;
+  let insertAuthor = req.body.author_id;
+  let insertTopic = req.body.topic_id;
+  console.log('REEEEEQ' , req.body)
+  console.log(insertBody);
+  console.log(insertAuthor);
+  console.log(insertTopic);
   return new Message ({
-    body: body
-    //author_id: 
-    //topic_id:
+    body: insertBody,
+    author_id: insertAuthor,
+    topic_id: insertTopic
   })
   .save()
   .then(message => {
-    console.log('ROUTER MESSAGE POST' , message)
-    message = message.toJSON(message);
+    //console.log('ROUTER MESSAGE POST' , message)
+    //message = message.toJSON(message);
   })
   .catch(err => {
     console.log(err)

@@ -44,9 +44,6 @@ angular.module('myApp')
     })
   }
 
-
-
-
   this.login = function (input) {
     //console.log('services' , input)
     return $http({
@@ -62,7 +59,7 @@ angular.module('myApp')
         isLoggedIn = false
         $location.path('/login')
       }
-      localStorage.setItem('username.' + result.data.name, 'user_id.' + result.data.id)
+      localStorage.setItem('user_id', result.data.id)
       isLoggedIn = true;
       // console.log('LOGIN SUCCESS' , isLoggedIn)
       // console.log(isLoggedIn)

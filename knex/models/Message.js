@@ -2,7 +2,8 @@ const bookshelf = require('./bookshelf');
 
 
 class Message extends bookshelf.Model {
-  get tableName() {return 'message'};
+  // 'MESSAGES' IS THE TABLE NAME IN POSTGRESQL
+  get tableName() {return 'messages'};
   get hasTimestamps() {return true};
 
 
