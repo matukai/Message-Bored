@@ -1,6 +1,10 @@
 angular.module('myApp')
 .controller('UpdateTopicController', ['$scope','$location', '$routeParams','TopicService','MessageService', function ($scope, $location, $routeParams, TopicService, MessageService) {
 
+  //FETCH ALL TOPICS
+  MessageService.fetchMessages();
+  $scope.messages = MessageService.getMessages();
+
 
   let id = $routeParams.id
   //console.log(id)

@@ -2,6 +2,18 @@
 
 <h1></h1>
 
+<ul>
+        <li ng-repeat='message in messages'>
+            <h2>BODY: {{message.body}}</h2>
+            <h3>ID : {{message.id}}</h3>
+            <h3>CREATED AT: {{created_at}}</h3>
+            <h3>UPDATED AT: {{updated_at}}</h3>
+        </li>
+</ul>
+
+
+
+
 <form>
     <input type="text" ng-model="newTopic.name">
     <br>
@@ -13,3 +25,4 @@
     <br>
     <button ng-click="insertMessage()">Enter A Message</button>
 </form>
+

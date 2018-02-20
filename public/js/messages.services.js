@@ -16,6 +16,7 @@ angular.module('myApp')
   }
 
   this.getMessages = function () {
+    console.log(messagesArr)
     return messagesArr;
   }
 
@@ -24,7 +25,7 @@ angular.module('myApp')
     .then(data => {
       let result = data.data;
       result.forEach(element => {
-        messagesArr.push(element)
+      messagesArr.push(element)
       })
       return messagesArr;
     })

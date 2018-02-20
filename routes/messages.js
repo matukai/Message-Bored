@@ -15,7 +15,6 @@ router.get('/', (req,res) => {
   })
 })
 
-
 router.post('/', (req,res) => {
   let insertBody = req.body.body;
   let insertAuthor = req.body.author_id;
