@@ -42,5 +42,15 @@ angular.module('myApp')
       })
     }
 
+    this.fetchSingleTopic = function () {
+      return $http.get('api/topics/:id')
+      .then(data => {
+        console.log('fetchsingletopic')
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    }
+
 
   }])

@@ -34,6 +34,19 @@ router.route('/')
   })
 })
 
+router.get('/:id', (req, res) => {
+  let id = req.params.id
+  console.log(id)
+  return new Topic({'id' : id})
+  .fetch()
+  .then(topic => {
+    return res.json(topic)
+  })
+  .catch(err => {
+    console.log(err)
+  })
+})
+
 router.put('/:id', (req, res) => {
   //console.log(req.params.id)
   let id = req.params.id;
